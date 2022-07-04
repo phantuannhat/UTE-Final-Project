@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule ^admin/home/?$ admin/index.php [L]
+RewriteRule ^(.*).html/?$ index.php?page=$1 [L]
+RewriteRule ^data/(.*)/?$ connect/send.php?key=$1 [QSA,L]
+
+ErrorDocument 401 /pages/404.php
+ErrorDocument 403 /pages/404.php
+ErrorDocument 404 /pages/404.php
+ErrorDocument 400 /pages/404.php
